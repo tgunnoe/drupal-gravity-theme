@@ -1,0 +1,130 @@
+/**
+ * @file
+ * Visual styles for the site branding block in Showcase+.
+ */
+@media (min-width: 992px) {
+  .header-container .container-fluid .logo-and-site-name-wrapper {
+    padding-left: 20px;
+  }
+}
+.logo {
+  float: left;
+  margin-right: 20px;
+  display: inline-block;
+}
+.logo-centered {
+  float: none;
+  text-align: center;
+}
+.logo:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out
+  transition: all 0.2s ease-in-out;
+}
+.site-name a {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-decoration: none;
+  font-variant: small-caps;
+  letter-spacing: 3px;
+}
+.region--light-typography .site-name a {
+  color: #ffffff;
+}
+.site-name a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.site-slogan {
+  font-size: 12px;
+  line-height: 2;
+}
+.headings-wide-spacing-enabled .site-slogan {
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+@media (max-width:767px) {
+  .logo {
+    float: none;
+    margin-right: 0;
+    display: block;
+    text-align: center;
+    display: block;
+    visibility: visible;
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    transform: scale(0.75);
+  }
+  .site-name,
+  .site-slogan {
+    text-align: center;
+  }
+  .site-name {
+    margin: 5px 0 0 0;
+  }
+  .site-slogan {
+    display: block;
+    visibility: visible;
+    padding: 5px 0 0 0;
+  }
+}
+
+/* Site Branding @footer*/
+.footer__section .logo-and-site-name-wrapper {
+  margin: 0 0 15px;
+}
+
+/* Site Branding @dark regions*/
+.region--dark-background .site-slogan,
+.region--black-background .site-slogan {
+  color: rgba(255, 255, 255, 0.70);
+}
+
+
+.background-image-block__section {
+    margin-left: 0;
+    margin-right: 0;
+    margin: 0 -15px;
+    padding: 90px 0;
+}
+.background-image-block__section .region--black-background {
+    position: relative;
+    background-color: transparent;
+}
+.background-image-block__section .background-image-overlay {
+    background-color: #1d1d1d;
+    opacity: 0.7;
+        position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+}
+.background-image-block__section .background-image.background-image--attachment-scroll {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.background-image-block__section .region--light-typography a{
+    text-decoration: none;
+}

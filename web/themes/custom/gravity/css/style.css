@@ -1,0 +1,41 @@
+/**
+ * @file
+ * Subtheme specific CSS.
+ */
+
+#navbar-main > .container {
+    display: block;
+}
+#navbar-main .site-branding-outer {
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+#navbar-main a.navbar-brand {
+    display: block;
+    float: left
+}
+#navbar-main h1.site-name {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 34px;
+    font-variant: small-caps;
+    letter-spacing: 3px;
+    line-height: 1;
+    width: 550px;
+}
+#navbar-main h1.site-name a {
+    font-family: serif;
+}
+#navbar-main h1.site-name a,
+#navbar-main h1.site-name a:hover {
+    text-decoration: none;
+    color: #3155a3;
+}
+
+.highlighted .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
