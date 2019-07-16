@@ -9,7 +9,7 @@ global-styling:
 bootstrap:
   js:
     /libraries/popper/popper.min.js: {}
-    /libraries/bootstrap/js/bootstrap.min.js: {}
+    /libraries/bootstrap/js/bootstrap.js: {}
   css:
     component:
       /libraries/bootstrap/css/bootstrap.min.css: {}
@@ -29,9 +29,3 @@ color.preview:
     color/preview.js: {}
   dependencies:
     - color/drupal.color
-playfair_display:
-  version: VERSION
-  css:
-    component:
-      fonts/playfair_display.css: {}
-      //fonts.googleapis.com/css?family=Open+Sans:300,400,600,700: {}

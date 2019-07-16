@@ -32,15 +32,4 @@ function gravity_form_system_theme_settings_alter(&$form, FormStateInterface $fo
       'bg-white' => t('White'),
       'bg-transparent' => t('Transparent'),
   );
-
-  $form['fonts']['fonts']['bootstrap_barrio_google_fonts']['#options']['playfair_display'] = 'Playfair Display';
-
-}
-
-function gravity_preprocess_page(&$variables)
-{
-  $fonts = theme_get_setting('bootstrap_barrio_google_fonts');
-  if ($fonts) {
-    $variables['#attached']['library'][] = ( $fonts == 'playfair_display' ? 'gravity' : 'bootstrap_barrio' ) . '/' . $fonts;
-  }
 }

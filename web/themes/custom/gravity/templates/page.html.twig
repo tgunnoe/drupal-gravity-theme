@@ -131,6 +131,15 @@
         </div>
       {% endblock %}
     {% endif %}
+    {% if page.featured_top_second %}
+      {% block featured_second %}
+        <div class="featured-top-second">
+          <aside class="featured-top-second__inner section container-fluid clearfix" role="complementary">
+            {{ page.featured_top_second }}
+          </aside>
+        </div>
+      {% endblock %}
+    {% endif %}
     <div id="main-wrapper" class="layout-main-wrapper clearfix">
       {% block content %}
         <div id="main" class="{{ container }}">

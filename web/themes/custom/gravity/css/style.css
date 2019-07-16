@@ -2,7 +2,15 @@
  * @file
  * Subtheme specific CSS.
  */
-
+body {
+    font-family: "Open Sans", sans-serif;
+}
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+}
+h2 {
+    font-size: 1.5rem;
+}
 #navbar-main > .container {
     display: block;
 }
@@ -38,4 +46,157 @@
 .highlighted .container-fluid {
     padding-left: 0;
     padding-right: 0;
+}
+
+#block-breadcrumbs {
+    text-align: center;
+    padding: 20px 15px;
+    width: 100%;
+    background-color: #f7f7f7;
+}
+.breadcrumb {
+    padding: 0;
+    margin: 0;
+    display: block;
+    background-color: transparent;
+}
+.breadcrumb li {
+    display: inline-block;
+}
+
+.view-front-practice-areas {
+    position: relative;
+    z-index: 100;
+    margin-top: -100px;
+    padding-bottom: 70px;
+}
+.view-front-practice-areas [class*="col-"]:nth-child(3n+2) .icon-block-outer {
+    margin-top: -20px;
+}
+.view-front-practice-areas .icon-block-outer {
+    text-align: center;
+    background: #fff;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 46px -5px rgba(0, 0, 0, 0.1);
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+.view-front-practice-areas .icon-block-outer:hover {
+    background: #123c63;
+}
+.icon-block-outer:hover h3 a, .icon-block-outer:hover p, .icon-block-outer:hover a.button-text, .icon-block-outer:hover a.button-text::after{
+    color: #fff;
+}
+.view-front-practice-areas .icon-block-outer h3 {
+    font-size: 22px;
+}
+
+.view-front-practice-areas .view-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.view-front-slider .carousel-item::after {
+  content:"";
+  display:block;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(0,0,0,0.4);
+}
+.view-front-slider .carousel-item .carousel-caption {
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-80%);
+}
+.view-front-slider .carousel-item .carousel-caption h2 {
+    font-size: 52px;
+    font-weight: 700;
+}
+.view-front-slider .carousel-item .carousel-caption p {
+    text-transform: uppercase;;
+}
+.icon-block-outer .button-container,
+.carousel-caption .button-container {
+    margin-top: 60px;
+}
+a.button-primary {
+    background-color: #123c63;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 30px;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    transition: 0.5s all;
+    padding: 12px 30px 13px;
+    line-height: 1;
+    font-weight: 600;
+    position:relative;
+
+}
+a.button-primary:hover {
+    color: #fff;
+}
+a.button-primary::before {
+    background-color: #ffffff;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    opacity: 1;
+    height: 1px;
+    width: 0;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    transition: 0.5s all;
+}
+a.button-primary:hover::before{
+    width: 30px;
+    opacity: 1;
+}
+.view-banner-blocks .page-banner-bg {
+    position: relative;
+}
+.view-banner-blocks .page-banner-bg .field-content::after {
+  content:"";
+  display:block;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(0,0,0,0.4);
+}
+.view-banner-blocks .views-field-title {
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    transform: translateY(-50%);
+}
+.view-banner-blocks .views-field-title a {
+    color: #fff;
 }
