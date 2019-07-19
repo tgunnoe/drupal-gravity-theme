@@ -15,7 +15,7 @@ h2 {
     display: block;
 }
 #navbar-main .site-branding-outer {
-    text-align: center;
+    text-align: left;
     padding-top: 10px;
     margin-bottom: 20px;
     padding-bottom: 10px;
@@ -28,11 +28,12 @@ h2 {
 #navbar-main h1.site-name {
     display: inline-block;
     font-weight: 600;
-    font-size: 34px;
+    font-size: 28px;
     font-variant: small-caps;
     letter-spacing: 3px;
     line-height: 1;
-    width: 550px;
+    width: 500px;
+    margin-top: 0.5rem;
 }
 #navbar-main h1.site-name a {
     font-family: serif;
@@ -47,7 +48,34 @@ h2 {
     padding-left: 0;
     padding-right: 0;
 }
-
+.featured-top{
+    background-color: rgb(246,248,249);
+}
+.section-title {
+    font-size: 34px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0;
+    line-height: 1.2;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.section-title::before{
+    background: #123c63;
+    bottom: 0;
+    content: "";
+    height: 3px;
+    width: 40px;
+    display: inline-block;
+    left: 0;
+    margin: auto;
+    right: 0;
+    position: absolute;
+}
+.field--type-text-with-summary {
+    margin: 0 0 15px;
+}
 #block-breadcrumbs {
     text-align: center;
     padding: 20px 15px;
@@ -100,7 +128,9 @@ h2 {
     justify-content: space-between;
     margin-top: 30px;
 }
-
+.view-front-slider .row {
+    display: block;
+}
 .view-front-slider .carousel-item::after {
   content:"";
   display:block;
@@ -123,6 +153,9 @@ h2 {
 .view-front-slider .carousel-item .carousel-caption p {
     text-transform: uppercase;;
 }
+
+
+
 .icon-block-outer .button-container,
 .carousel-caption .button-container {
     margin-top: 60px;
@@ -143,10 +176,12 @@ a.button-primary {
     line-height: 1;
     font-weight: 600;
     position:relative;
+    display: inline-block;
 
 }
-a.button-primary:hover {
+.button-primary:hover, .button-primary:focus, .button-primary:active {
     color: #fff;
+    padding-left: 60px;
 }
 a.button-primary::before {
     background-color: #ffffff;
@@ -199,4 +234,50 @@ a.button-primary:hover::before{
 }
 .view-banner-blocks .views-field-title a {
     color: #fff;
+}
+.node--view-mode-card.ds-2col-fluid {
+    display:flex;
+    align-items: center;
+}
+.view-front-about-us .field--type-image {
+    margin-right: 0;
+}
+.view-front-about-us .group-right img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+}
+.view-front-about-us .group-left {
+    padding: 0 50px 0 100px;
+}
+.view-front-about-us .group-left .section-title::before {
+    left: 0;
+    right: auto;
+}
+.view-front-about-us .group-left .button-container {
+    margin-top: 40px;
+}
+#block-faqcallout {
+    width: 100%;
+    color: #fff;
+}
+#block-faqcallout .card {
+    border: 0;
+}
+#block-faqcallout .field--name-field-background-image {
+    height: 200px;
+}
+#block-faqcallout .card-img-overlay {
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    align-items: center;
+}
+#block-faqcallout .section-title {
+    margin:0;
+    padding:0;
+}
+#block-faqcallout .card-img-overlay .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
