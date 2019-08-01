@@ -358,10 +358,10 @@ a.button-primary:hover, a.button-primary:focus, a.button-primary:active {
     width: 30px;
     opacity: 1;
 }
-.view-banner-blocks .page-banner-bg {
+.view-banner-blocks .views-row {
     position: relative;
 }
-.view-banner-blocks .page-banner-bg .field-content::after {
+.view-banner-blocks .views-field-rendered-entity .field-content::after {
   content:"";
   display:block;
   position:absolute;
@@ -383,6 +383,9 @@ a.button-primary:hover, a.button-primary:focus, a.button-primary:active {
     text-align: center;
     transform: translateY(-50%);
 }
+.view-banner-blocks img {
+    margin: 0;
+}
 .view-banner-blocks .views-field-title a {
     color: #fff;
 }
@@ -392,6 +395,9 @@ a.button-primary:hover, a.button-primary:focus, a.button-primary:active {
 }
 .view-front-about-us .field--type-image {
     margin-right: 0;
+}
+.carousel-item img {
+    margin-bottom: 0;
 }
 .view-front-about-us .group-right img {
     width: 100%;
@@ -439,7 +445,7 @@ a.button-primary:hover, a.button-primary:focus, a.button-primary:active {
     justify-content: space-between;
 }
 .featured-bottom-first,
-.featured-bottom-third {
+.featured-bottom-fourth {
     background-color: rgb(246,248,249);
 }
 .view-frontpage .view-header {
@@ -449,7 +455,6 @@ a.button-primary:hover, a.button-primary:focus, a.button-primary:active {
 .featured-top-third,
 .featured-bottom-first,
 .featured-bottom-second,
-.featured-bottom-third,
 .featured-bottom-fourth {
     padding: 60px 0 80px 0;
 }
@@ -716,13 +721,26 @@ a.button-primary:hover, a.button-primary:focus, a.button-primary:active {
 #block-views-block-staff-portraits-block-3 {
     margin-top: 60px;
 }
-#block-contactus .section-title-group {
+#block-contactus .section-title-group,
+.view-front-media .section-title-group,
+.view-frontpage .section-title-group {
     text-align: center;
 }
-#block-contactus .section-title::before {
+#block-contactus .section-title::before,
+.view-front-media .section-title::before,
+.view-frontpage .section-title::before {
     right: 0;
 }
 #views-bootstrap-staff-portraits-block-1 .row > div,
 #views-bootstrap-staff-portraits-block-2 .row > div {
     margin-bottom:40px;
+}
+
+.view-map-of-locations .row {
+    display: block;
+
+}
+
+.featured-bottom-third .row {
+    display: block;
 }
