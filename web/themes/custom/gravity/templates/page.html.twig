@@ -92,11 +92,10 @@
           {% if container_navbar %}
           <div class="container">
         {% endif %}
-          <div class="col-9 col-lg-12">
+          <div class="col-lg-12 header-area-dual">
             {{ page.header }}
-          </div>
             {% if page.primary_menu or page.header_form %}
-              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><i class="material-icons">menu</i></button>
               <div class="collapse navbar-collapse" id="CollapsingNavbar">
                 {{ page.primary_menu }}
                 {% if page.header_form %}
@@ -104,11 +103,13 @@
                     {{ page.header_form }}
                   </div>
                 {% endif %}
-	          </div>
+	      </div>
             {% endif %}
             {% if sidebar_collapse %}
               <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#CollapsingLeft" aria-controls="CollapsingLeft" aria-expanded="false" aria-label="Toggle navigation"></button>
             {% endif %}
+          </div>
+
           {% if container_navbar %}
           </div>
           {% endif %}

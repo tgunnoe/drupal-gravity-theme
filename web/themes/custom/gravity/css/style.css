@@ -65,7 +65,42 @@ form-control {
     transition: background-color, 0.5s;
 }
 
+#navbar-top {
+    background-color: #2e2e2e;
+    color: #888;
+    font-size: 12px;
+}
+#navbar-top .views-field-nothing .field-content {
+    display: flex;
+    align-items: center;
+}
+#navbar-top .material-icons {
+    font-size: 16px;
+}
 
+#navbar-top .region-top-header {
+    width: 100%;
+}
+#navbar-top .block-views-block-locations-top-block-1 {
+    width: 100%;
+}
+#navbar-top .views-row {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+#navbar-top .views-field.views-field-title {
+    display: inline-block;
+    line-height: 29px;
+    text-align: center;
+    margin-left: 5px;
+}
+#navbar-top .views-field.views-field-nothing {
+    display: inline-block;
+}
+#navbar-top a{
+    color: #888;
+}
 
 ul#superfish-main > li {
     border: 1px solid transparent;
@@ -156,25 +191,47 @@ ul#superfish-main .active-trail {
 #navbar-main > .container {
     display: block;
 }
+
+.col-lg-12.header-area-dual {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.navbar-expand-lg .navbar-collapse {
+    justify-content: right;
+}
+#block-gravity-mainnavigation {
+    display: flex;
+    flex-basis: auto;
+    align-items: center;
+    justify-content: right;
+}
+#block-gravity-mainnavigation.block-superfish {
+    width: auto;
+}
 #navbar-main .site-branding-outer {
     text-align: left;
     padding-top: 10px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+    margin-bottom: 0;
+    padding-bottom: 0px;
     border-bottom: 1px solid #e6e6e6;
 }
 #navbar-main a.navbar-brand {
     display: block;
-    float: left
+    float: left;
+}
+#navbar-main .navbar-brand img.img-fluid {
+    height:80px;
 }
 #navbar-main h1.site-name {
     display: inline-block;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 22px;
     font-variant: small-caps;
     letter-spacing: 3px;
     line-height: 1;
-    width: 500px;
+    width: 400px;
     margin-top: 0.5rem;
 }
 #navbar-main h1.site-name a {
@@ -248,7 +305,7 @@ h3.section-title {
 .view-front-practice-areas [class*="col-"]:nth-child(3n+2) .icon-block-outer {
     margin-top: -20px;
 }
-.view-front-practice-areas .icon-block-outer {
+.icon-block-outer {
     text-align: center;
     background: #fff;
     padding: 40px 20px;
@@ -260,13 +317,13 @@ h3.section-title {
     -o-transition: background-color 0.3s;
     transition: background-color 0.3s;
 }
-.view-front-practice-areas .icon-block-outer:hover {
+.icon-block-outer:hover {
     background: #123c63;
 }
 .icon-block-outer:hover h3 a, .icon-block-outer:hover p, .icon-block-outer:hover .button-container a, .icon-block-outer:hover .button-container a::after {
     color: #fff;
 }
-.view-front-practice-areas .icon-block-outer h3 {
+.icon-block-outer h3 {
     font-size: 22px;
 }
 
@@ -358,10 +415,12 @@ a.button-primary:hover, a.button-primary:focus, a.button-primary:active {
     width: 30px;
     opacity: 1;
 }
-.view-banner-blocks .views-row {
+.container-fluid.region-highlighted,
+.view-banner-blocks .views-row,
+.page-banner-bg .views-field-rendered-entity {
     position: relative;
 }
-.view-banner-blocks .views-field-rendered-entity .field-content::after {
+#block-views-block-page-banners-block-1::after {
   content:"";
   display:block;
   position:absolute;
@@ -371,7 +430,7 @@ a.button-primary:hover, a.button-primary:focus, a.button-primary:active {
   right:0;
   background:rgba(0,0,0,0.4);
 }
-.view-banner-blocks .views-field-title {
+#block-gravity-page-title {
     position: absolute;
     right: 15%;
     top: 50%;
@@ -396,8 +455,12 @@ a.button-primary:hover, a.button-primary:focus, a.button-primary:active {
 .view-front-about-us .field--type-image {
     margin-right: 0;
 }
+.carousel-item {
+    max-height: 630px;
+}
 .carousel-item img {
     margin-bottom: 0;
+    min-width: 100%;
 }
 .view-front-about-us .group-right img {
     width: 100%;
@@ -743,4 +806,13 @@ a.button-primary:hover, a.button-primary:focus, a.button-primary:active {
 
 .featured-bottom-third .row {
     display: block;
+}
+
+.field--name-description ul,
+.field--name-description ol {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.field--name-description li {
+    padding-left: 10px;
 }
