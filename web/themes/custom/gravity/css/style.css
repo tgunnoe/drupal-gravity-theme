@@ -188,6 +188,9 @@ ul#superfish-main .active-trail {
 .icon-block-outer .button-container a:hover {
     text-decoration: none;
 }
+#navbar-main {
+    padding-bottom: 1rem;
+}
 #navbar-main > .container {
     display: block;
 }
@@ -720,7 +723,10 @@ a.button-primary:hover, a.button-primary:focus, a.button-primary:active {
 .card-img-top .field--type-image img:focus {
     opacity: 0.7;
 }
-
+.sidebar nav ul.nav {
+    margin: 0;
+    padding-bottom: 0;
+}
 .sidebar .block {
     margin-bottom: 30px;
     padding: 15px 30px;
@@ -895,4 +901,53 @@ a.button-primary:hover, a.button-primary:focus, a.button-primary:active {
 }
 .site-footer__bottom {
     margin-top: 70px;
+}
+
+.views-field.views-field-field-portrait {
+    float: left;
+    margin-right: 20px;
+}
+.view-staff-portraits .views-field-body,
+.view-staff .views-field-body {
+    text-align: justify;
+}
+.site-footer .views-field-field-phone-num .field-content,
+.site-footer .views-field-field-fax-num .field-content {
+    display: inline-block;
+}
+.node--type-location h3.section-title {
+    margin-top:0;
+}
+
+.node--type-location .field--label-above {
+    margin-bottom: 40px;
+}
+
+.node--type-staff-member .layout--twocol-bricks > .layout__region--first-above {
+    flex: 0 1 30%;
+    padding: 0 20px;
+}
+.node--type-staff-member .layout--twocol-bricks > .layout__region--second-above {
+    flex: 0 1 70%;
+    padding: 0 20px;
+}
+
+@media all and (min-width: 48em) and (max-width: 61em),
+@media all and (min-width: 0em) and (max-width: 47em){
+    .node--type-staff-member .layout--twocol-bricks > .layout__region--first-above {
+        flex: 0 1 100%;
+    }
+    .node--type-staff-member .layout--twocol-bricks > .layout__region--second-above {
+        flex: 0 1 100%;
+    }
+}
+
+.node--type-staff-member .layout--twocol-bricks > .layout__region--first-above img {
+    width: 100%;
+    height: auto;
+}
+.node--type-staff-member .field--type-entity-reference .field__label {
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }

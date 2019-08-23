@@ -1,5 +1,5 @@
 {
-    "name": "wwss-law",
+    "name": "wwss-law/site",
     "description": "Project template for Drupal 8 projects with composer",
     "type": "project",
     "license": "GPL-2.0-or-later",
@@ -108,6 +108,11 @@
             "initial": {
                 ".editorconfig": "../.editorconfig",
                 ".gitattributes": "../.gitattributes"
+            }
+        },
+        "patches": {
+            "drupal/core": {
+                "Drupal media oembed patch": "https://www.drupal.org/files/issues/2019-01-26/drupal_d8_media_oembed_exceptions-3028667-5.patch"
             }
         }
     }
