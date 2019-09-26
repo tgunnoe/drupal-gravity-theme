@@ -56,15 +56,23 @@ services:
       NGINX_BACKEND_HOST: php
       NGINX_SERVER_ROOT: /var/www/html/web
       NGINX_VHOST_PRESET: $NGINX_VHOST_PRESET
-#      NGINX_DRUPAL_FILE_PROXY_URL: http://example.com
+#      NGINX_DRUPAL_FILE_PROXY_URL: https://wwss.law
     volumes:
       - ./:/var/www/html
+#      - ./data/nginx:/etc/nginx/conf.d
+#      - ./data/certbot/conf:/etc/letsencrypt
+#      - ./data/certbot/www:/var/www/certbot
+#    ports:
+#      - "80:80"
+#      - "443:443"
 # For macOS users (https://wodby.com/stacks/drupal/docs/local/docker-for-mac/)
 #      - ./:/var/www/html:cached # User-guided caching
 #      - docker-sync:/var/www/html # Docker-sync
     labels:
+#      - 'traefik.enable=true'
       - 'traefik.backend=${PROJECT_NAME}_nginx'
       - 'traefik.port=80'
+#      - 'traefik.port=443'
       - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL}'
 
   mailhog:
@@ -262,27 +270,42 @@ services:
 #      - 'traefik.port=8080'
 #      - 'traefik.frontend.rule=Host:xhprof.${PROJECT_BASE_URL}'
 
-  portainer:
-    image: portainer/portainer
-    container_name: "${PROJECT_NAME}_portainer"
-    command: --no-auth -H unix:///var/run/docker.sock
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    labels:
-      - 'traefik.backend=${PROJECT_NAME}_portainer'
-      - 'traefik.port=9000'
-      - 'traefik.frontend.rule=Host:portainer.${PROJECT_BASE_URL}'
+  # portainer:
+  #   image: portainer/portainer
+  #   container_name: "${PROJECT_NAME}_portainer"
+  #   command: --no-auth -H unix:///var/run/docker.sock
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #   labels:
+  #     - 'traefik.backend=${PROJECT_NAME}_portainer'
+  #     - 'traefik.port=9000'
+  #     - 'traefik.frontend.rule=Host:portainer.${PROJECT_BASE_URL}'
 
   traefik:
     image: traefik
     container_name: "${PROJECT_NAME}_traefik"
-    command: -c /dev/null --web --docker --logLevel=INFO
+    command: -c /dev/null --web --docker --configFile=/traefik.toml  # -c /dev/null --web --docker --logLevel=INFO 
     ports:
-      - '8000:80'
-#      - '8080:8080' # Dashboard
+      - '80:80'
+      - '443:443'
+      - '8080:8080' # Dashboard
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-
+      - ./data/traefik/traefik.toml:/traefik.toml
+      - ./data/traefik/acme.json:/acme.json
+#      -	./app/nginx/certs:/certs
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.port=80'
+      - 'traefik.backend=${PROJECT_NAME}_nginx'
+      - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL}'
+#- 'traefik.frontend.auth.basic=${BASIC_AUTH}'
+    restart: unless-stopped
+#  certbot:
+#    image: certbot/certbot
+#    volumes:
+#      - ./data/certbot/conf:/etc/letsencrypt
+#      - ./data/certbot/www:/var/www/certbot
 #volumes:
 ## Docker-sync for macOS users
 #  docker-sync:
