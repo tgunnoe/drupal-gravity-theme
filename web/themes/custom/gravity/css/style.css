@@ -302,7 +302,7 @@ h3.section-title {
 .view-front-practice-areas {
     position: relative;
     z-index: 100;
-    margin-top: -100px;
+    margin-top: -150px;
     padding-bottom: 70px;
 }
 .view-front-practice-areas [class*="col-"]:nth-child(3n+2) .icon-block-outer {
@@ -939,6 +939,9 @@ a.button-primary:hover, a.button-primary:focus, a.button-primary:active {
     }
     .node--type-staff-member .layout--twocol-bricks > .layout__region--second-above {
         flex: 0 1 100%;
+    }
+    #navbar-top {
+        display: none;
     }
 }
 
