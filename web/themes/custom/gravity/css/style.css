@@ -1,3 +1,4 @@
+
 /**
  * @file
  * Subtheme specific CSS.
@@ -21,6 +22,9 @@ h3 {
 }
 h3 a {
     color: #10242b;
+}
+h4 {
+    font-size: 1rem;
 }
 
 
@@ -194,7 +198,9 @@ ul#superfish-main .active-trail {
 #navbar-main > .container {
     display: block;
 }
-
+#CollapsingNavbar {
+    position: relative;
+}
 .col-lg-12.header-area-dual {
     display: flex;
     justify-content: space-between;
@@ -209,6 +215,8 @@ ul#superfish-main .active-trail {
     flex-basis: auto;
     align-items: center;
     justify-content: right;
+    position: absolute;
+    right:0;
 }
 #block-gravity-mainnavigation.block-superfish {
     width: auto;
@@ -245,11 +253,17 @@ ul#superfish-main .active-trail {
     text-decoration: none;
     color: #3155a3;
 }
-
 .highlighted .container-fluid {
     padding-left: 0;
     padding-right: 0;
 }
+.highlighted .view-content.row {
+    display: block;
+}
+.highlighted .view-content.row .field-content {
+    overflow:hidden;
+}
+
 .featured-top{
     background-color: rgb(246,248,249);
 }
@@ -267,6 +281,10 @@ ul#superfish-main .active-trail {
 h3.section-title {
     font-size: 24px;
     margin-top: 30px;
+}
+h4.section-title {
+    display: block;
+    font-size: 1.5em;
 }
 .section-title::before{
     background: #123c63;
@@ -302,7 +320,7 @@ h3.section-title {
 .view-front-practice-areas {
     position: relative;
     z-index: 100;
-    margin-top: -150px;
+    margin-top: -120px;
     padding-bottom: 70px;
 }
 .view-front-practice-areas [class*="col-"]:nth-child(3n+2) .icon-block-outer {
@@ -451,7 +469,7 @@ a.button-primary:hover, a.button-primary:focus, a.button-primary:active {
 .view-banner-blocks .views-field-title a {
     color: #fff;
 }
-.node--view-mode-card.ds-2col-fluid {
+.view-front-about-us .layout--twocol {
     display:flex;
     align-items: center;
 }
@@ -465,19 +483,19 @@ a.button-primary:hover, a.button-primary:focus, a.button-primary:active {
     margin-bottom: 0;
     min-width: 100%;
 }
-.view-front-about-us .group-right img {
+.view-front-about-us .layout__region--second img {
     width: 100%;
     height: auto;
     margin-bottom: 0;
 }
-.view-front-about-us .group-left {
+.view-front-about-us .layout__region--first {
     padding: 0 50px 0 100px;
 }
-.view-front-about-us .group-left .section-title::before {
+.view-front-about-us .layout__region--first .section-title::before {
     left: 0;
     right: auto;
 }
-.view-front-about-us .group-left .button-container {
+.view-front-about-us .layout__region--first .button-container {
     margin-top: 40px;
 }
 #block-faqcallout {
@@ -931,9 +949,11 @@ a.button-primary:hover, a.button-primary:focus, a.button-primary:active {
     flex: 0 1 70%;
     padding: 0 20px;
 }
+td.views-field.views-field-field-geolocation.views-align-right {
+    width:60%;
+}
 
-@media all and (min-width: 48em) and (max-width: 61em),
-@media all and (min-width: 0em) and (max-width: 47em){
+@media all and (min-width: 48em) and (max-width: 61em){
     .node--type-staff-member .layout--twocol-bricks > .layout__region--first-above {
         flex: 0 1 100%;
     }
@@ -943,8 +963,24 @@ a.button-primary:hover, a.button-primary:focus, a.button-primary:active {
     #navbar-top {
         display: none;
     }
+    td.views-field.views-field-field-geolocation.views-align-right {
+        width:30%;
+    }
 }
-
+@media all and (min-width: 0em) and (max-width: 47em) {
+    .node--type-staff-member .layout--twocol-bricks > .layout__region--first-above {
+        flex: 0 1 100%;
+    }
+    .node--type-staff-member .layout--twocol-bricks > .layout__region--second-above {
+        flex: 0 1 100%;
+    }
+    #navbar-top {
+        display: none;
+    }
+    td.views-field.views-field-field-geolocation.views-align-right {
+        width:30%;
+    }
+}
 .node--type-staff-member .layout--twocol-bricks > .layout__region--first-above img {
     width: 100%;
     height: auto;
@@ -953,4 +989,18 @@ a.button-primary:hover, a.button-primary:focus, a.button-primary:active {
     font-weight: 600;
     margin-top: 30px;
     margin-bottom: 20px;
+}
+
+.view-map-of-locations table h3.section-title {
+    margin-top: 0;
+}
+.view-map-of-locations table h4 {
+    margin-top: 10px;
+}
+.view-map-of-locations table tr {
+    background: 0;
+}
+.view-map-of-locations td.views-field {
+    padding: 50px 0;
+    border: 0;
 }

@@ -48,11 +48,13 @@
         "drupal/radix": "^4.3",
         "drupal/responsive_menu": "^2.6",
         "drupal/showcase_lite": "^1.1",
+        "drupal/smtp": "^1.0@beta",
         "drupal/superfish": "^1.3",
         "drupal/taxonomy_menu": "^3.4",
         "drupal/video_embed_field": "^2.0",
         "drupal/views_accordion": "^1.2",
         "drupal/views_bootstrap": "4.1",
+        "drupal/views_contact_form": "^1.0",
         "drupal/views_slideshow": "^4.6",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
@@ -113,7 +115,10 @@
         "patches": {
             "drupal/core": {
                 "Drupal media oembed patch": "https://www.drupal.org/files/issues/2019-01-26/drupal_d8_media_oembed_exceptions-3028667-5.patch"
-            }
+            },
+	    "drupal/views_bootstrap": {
+		"Veleiro's bootstrap 4 patch": "https://www.drupal.org/files/issues/2019-07-18/typeerror-parent-is-null-error-upon-clicking-to-open-the-accordion-3068816-1.patch"
+	    }
         }
     }
 }
